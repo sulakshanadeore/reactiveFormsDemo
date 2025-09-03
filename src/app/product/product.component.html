@@ -1,0 +1,23 @@
+<form [formGroup]="productForm" (ngSubmit)="onOrderComplete">
+
+<fieldset>
+    <legend>Order Form For Product</legend>
+    <label>Enter ProductID</label>
+    <input type="number" formControlName="prodId"/>
+    <br/>
+     <label>Enter ProductName</label>
+    <input type="text" formControlName="prodName"/>
+    <br/>
+     <label>Enter Price</label>
+    <input type="number" formControlName="prodPrice"/>
+    <br/>
+     <label>Enter ProductID</label>
+    <input type="number" formControlName="prodQty"/>
+    <br/>
+
+
+</fieldset>
+<button type="submit" [disabled]="productForm.invalid">Submit Order</button>
+
+
+</form>
