@@ -1,0 +1,30 @@
+<form [formGroup]="userSignup" (ngSubmit)=onSubmit()>
+    <fieldset>
+        <legend>SIGNUP</legend>
+    <label>Enter Name</label>
+    <input type="text" formControlName="name"/>
+    <div *ngIf="userSignup.get('name')?.touched && userSignup.get('name')?.invalid">
+Name is required, minimum length 3 characters
+    </div>
+<br/>
+
+    <label>Enter Email</label>
+    <input type="email" formControlName="emailid"/>
+ <div *ngIf="userSignup.get('emailid')?.invalid && userSignup.get('emailid')?.touched">
+Email is Valid email id, its required
+    </div>
+
+    <br/>
+    <label>Enter Age</label>
+    <input type="text" formControlName="age"/>
+     <div *ngIf="userSignup.get('age')?.invalid && userSignup.get('age')?.touched">
+Age must be greater than 18
+    </div>
+<br/>
+</fieldset>
+    <button type="submit" [disabled]="userSignup.invalid">Submit</button>
+
+
+
+
+</form>
