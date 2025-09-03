@@ -6,13 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProductComponent } from './product/product.component';
+import { CustomerComponent } from './customer/customer.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
-    ProductComponent
+    ProductComponent,
+    CustomerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +24,6 @@ import { ProductComponent } from './product/product.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }
